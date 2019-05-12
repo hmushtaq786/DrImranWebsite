@@ -4,21 +4,95 @@
     font-family: sans-serif;
 }
 
+#mainwindow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-left: 200px;
+    margin-top: 55px;
+    background: #f3f3f3;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background: #57ccc3;
+}
+
 #sidebar {
     position: fixed;
+    margin-top: 55px;
     width: 200px;
     height: 100%;
-    background: gray;
+    background: rgba(87, 204, 195, 0.2);
 }
 
-#sidebar ul li {
-    color: rgba(230, 230, 230, 0.9);
+#side-items ul li {
+    /*border: 1px solid rgba(100, 100, 100, 0.9);*/
+    color: #404040;
     list-style: none;
-    padding: 15px 10px;
-    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
-    padding-left: 20%;
+    padding: 15px 15px 15px 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom: 1px solid #b3b1b1;
 }
 
-#sidebar ul {
-    padding-top: 20%;
+#side-items ul li:hover {
+    color: #57ccc3;
+    cursor: pointer;
+    border-bottom: 1px solid #57ccc3;
+}
+
+#profile-tab ul li div span:hover {
+    color: #57ccc3;
+    cursor: pointer;
+}
+
+#side-items ul {
+    padding-top: 30%;
+}
+
+#profile-tab {
+    color: #404040;
+}
+
+#avatar img {
+    padding-top: 10%;
+    padding-right: 35%;
+    padding-left: 35%;
+    padding-bottom: 10%;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+#navbar div #span1 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    line-height: 23px;
+    color: #404040;
+    padding-left: 2%;
+}
+
+#navbar div #span2:hover {
+    letter-spacing: 5px;
+}
+
+#navbar div {
+    padding-top: 1%;
+}
+
+#navbar div:hover {
+    cursor: pointer;
+}
+
+#navbar div #span2 {
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    font-family: Montserrat, sans-serif;
+    line-height: 23px;
+    color: #fcfcfc;
 }
