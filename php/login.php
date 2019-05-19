@@ -9,7 +9,26 @@
 
         $password = strip_tags($_POST['pass']);
 
+        try {
+            $stmt = $db->prepare("SELECT * from users where username='$username' and password='$password'");
+            $stmt->execute();
 
+            // set the resulting array to associative
+            //$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $count = $stmt->rowCount();
+            if ($count == 1) {
+                $_SESSION['s_username'] = $username;
+                $_SESSION['s_password'] = $password;
+                echo"<script type='text/javascript'>location='../CMS/cmsdashboard.php';</script>";
+            } else {
+                echo "<script type='text/javascript'>alert('Invalid username/password');</script>";
+            }
+        }
+        catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $conn = null;
+/*
         $sql = "SELECT * from users where username='$username' and password='$password'";
 
         $result = mysqli_query($db, $sql);
@@ -19,10 +38,10 @@
         if($rows==1){
             $_SESSION['s_username'] = $username;
             $_SESSION['s_password'] = $password;
-            echo"<script type='text/javascript'>location='../CMS/index.php';</script>";
+            echo"<script type='text/javascript'>location='../CMS/cmsdashboard.php';</script>";
         } else{
             echo "<script type='text/javascript'>alert('Invalid username/password');</script>";
-        }
+        }*/
     }
 
 

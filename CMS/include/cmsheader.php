@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/blogpage.css">
     <title>Document</title>
 </head>
 
@@ -33,20 +34,11 @@
         <!--sideitems in sidebar div-->
         <div id="side-items">
             <ul>
-                <li>Dashboard</li>
-                <li>Blogs</li>
+                <a href="cmsdashboard.php"><li>Dashboard</li></a>
+                <a href="cmsblogs.php"><li>Blogs</li></a>
                 <li>FAQs</li>
                 <li>Settings</li>
                 <li>Logout</li>
             </ul>
         </div>
     </div>
-
-    <!--Main Working area-->
-    <div id="mainwindow">
-
-    </div>
-
-</body>
-
-</html>
